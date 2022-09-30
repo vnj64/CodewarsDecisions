@@ -1,8 +1,7 @@
 def digital_root(n):
-    counter = 0
-    for number in n:
-        counter += int(number)
-
-    return counter
-
-print(digital_root('123'))
+    root = 0
+    for d in str(n):
+        root += int(d)
+    if len(str(root)) > 1:
+        root = digital_root(root)
+    return root
